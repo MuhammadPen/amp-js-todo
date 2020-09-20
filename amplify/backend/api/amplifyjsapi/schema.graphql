@@ -1,0 +1,7 @@
+type Todo @model {
+  id: ID!
+  user: String!
+  data: String!
+  isCompleted: Boolean!
+  description: String
+}

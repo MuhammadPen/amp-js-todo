@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amplify Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html,
+      body {
+        font-family: "Amazon Ember", "Helvetica", "sans-serif";
+        margin: 0;
+        overflow-x: hidden;
+      }
+      #title_text {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 100;
+      }
+      .form_elements {
+        position: relative;
+        left: 40%;
+        padding: 5px;
+        display: block;
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .form {
+        padding: 20px;
+        font-family: "Amazon Ember", "Helvetica", "sans-serif";
+        background-color: rgb(255, 244, 221);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <h1 id="title_text">Todo App</h1>
+      <div class="app-body">
+        <div id="errors"></div>
+        <div id="updates"></div>
+        <!--Sign up form-->
+        <form id="sign_up_form" class="form">
+          <h2 class="form_elements">Sign up</h2>
+          <input
+            class="form_elements"
+            id="email_signup"
+            type="text"
+            placeholder="email"
+          />
+          <input
+            class="form_elements"
+            id="password_signup"
+            type="password"
+            placeholder="password"
+          />
+          <button class="form_elements" id="sign_up_button" type="button">
+            Sign up
+          </button>
+        </form>
+        <!--confirm sign up-->
+        <form id="verify_sign_up" class="form">
+          <h2 class="form_elements">Verify Sign up</h2>
+          <input
+            class="form_elements"
+            id="verify_code"
+            type="text"
+            placeholder="verification code"
+          />
+          <button class="form_elements" id="verify_button" type="button">
+            verify code
+          </button>
+        </form>
+        <!-- sign in form-->
+        <form id="sign_in_form" class="form">
+          <h2 class="form_elements">Sign in</h2>
+          <input
+            class="form_elements"
+            id="email_signin"
+            type="text"
+            placeholder="email"
+          />
+          <input
+            class="form_elements"
+            id="password_signin"
+            type="password"
+            placeholder="password"
+          />
+          <button class="form_elements" id="sign_in_button" type="button">
+            Sign in
+          </button>
+        </form>
+        <!--Sign out form-->
+        <form id="sign_out_form" class="form">
+          <h2 class="form_elements">Sign out</h2>
+          <button class="form_elements" id="sign_out_button" type="button">
+            Sign out
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="auth.bundle.js"></script>
+    <!-- <script src="./src/auth.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>

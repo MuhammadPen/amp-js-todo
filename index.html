@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amplify Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html,
+      body {
+        font-family: "Amazon Ember", "Helvetica", "sans-serif";
+        margin: 0;
+        overflow-x: hidden;
+      }
+      #title_text {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 100;
+      }
+      #current_user {
+        border-style: solid;
+        border-color: orange;
+        border-radius: 5px;
+        border-width: 2px;
+        text-align: center;
+      }
+      .form_elements {
+        padding: 5px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      #_form {
+        padding: 20px;
+        font-family: "Amazon Ember", "Helvetica", "sans-serif";
+        background-color: rgb(255, 238, 203);
+        border-style: solid;
+        border-color: orange;
+        border-width: 1px;
+        position: relative;
+        top:1%;
+        left: 80%;
+      }
+      .todo_item {
+        background-color: rgb(255, 244, 221);
+        border-style: solid;
+        border-color: orange;
+        border-radius: 5px;
+        border-width: 2px;
+        margin: 5px;
+      }
+      * {
+  box-sizing: border-box;
+    }
+    ul {
+    margin: 0;
+    padding: 0;
+    }
+    ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+  
+    }
+    ul li:nth-child(odd) {
+    background: #f9f9f9;
+    }
+    ul li:hover {
+    background: #ddd;
+    }
+    ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+    }
+    ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    }
+    .header {
+    background-color: #ffd079;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    }
+    .header:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    }
+    .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    }
+    .addBtn:hover {
+    background-color: #bbb;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <h1 id="title_text">Todo App</h1>
+        <div class="app-body">
+            <div id="current_user"></div>
+            <div id="myDIV" class="header">
+                <h2 style="margin: 5px">To Do List</h2>
+                <input type="textarea" id="todo_input" placeholder="Add todo" />
+                <span class="addBtn" id="addBtn">Add</span>
+            </div>
+
+          <ul id="myUL">
+          </ul>
+        </div>
+    </div>
+        <!--Save items-->
+        <form id="_form" class="form">
+        <h2 class="form_elements">Save items</h2>
+        <button class="form_elements" id="save_items_button" type="button">
+            Save
+        </button>
+        </form>
+        <!--Sign out form-->
+        <form id="_form" class="form">
+            <h2 class="form_elements">Sign out</h2>
+            <button class="form_elements" id="sign_out_button" type="button">
+            Sign out
+            </button>
+        </form>
+
+    </div>
+    <script src="app.bundle.js"></script>
+    <script src="todo.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>
